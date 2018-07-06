@@ -1,0 +1,62 @@
+<md-toolbar class="md-hue-2">
+    <div class="md-toolbar-tools">
+        <md-button class="md-icon-button" aria-label="Sidenav" ng-click="vm.openSidenav()" hide-gt-sm>
+            <md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
+        </md-button>
+
+        <img src="img/hds-logo.png" class="logo" alt="Logo">
+        <h2 flex md-truncate> Hadistra Portal</h2>
+
+        <md-button ng-click="vm.toTaskList()">Task List</md-button>
+
+        <md-button class="md-icon-button " aria-label="Notification ">
+            <md-icon md-svg-icon="img/icons/notification.svg "></md-icon>
+        </md-button>
+
+        <md-menu md-position-mode="target-right target ">
+
+            <md-button aria-label="Open user menu " class="md-icon-button " ng-click="vm.openMenu($mdMenu,$event) ">
+                <md-icon md-svg-icon="img/icons/man.svg "></md-icon>
+            </md-button>
+            <md-menu-content width="4 ">
+                <md-menu-item>
+                    <h3>Welcome, {{ vm.username }}</h3>
+                </md-menu-item>
+                <md-menu-item>
+                    <md-button ng-click="vm.logout() ">
+                        <md-icon md-svg-icon="img/icons/sign-out.svg " md-menu-align-target></md-icon>
+                        Log out
+                    </md-button>
+                </md-menu-item>
+
+            </md-menu-content>
+        </md-menu>
+    </div>
+</md-toolbar>
+<md-content layout="row" flex>
+    <div layout="column">
+        <md-sidenav layout="column" class="md-whiteframe-4dp ardi" md-component-id="left" md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')">
+            <md-list ng-repeat="item in vm.allProcess">
+                <md-list-item class="md-2-line" ng-click="vm.showConfirm($event,item.processId)">
+                    <md-icon md-svg-icon="img/icons/settings.svg" class="avatar"></md-icon>
+                    <div class="md-list-item-text " layout="column">
+                        <h4>{{item.display}}</h4>
+                    </div>
+                </md-list-item>
+            </md-list>
+        </md-sidenav>
+    </div>
+    <div layout="column" flex>
+        <md-content layout="column" flex>
+            <div layout="row" class="contentRow">
+                <div layout="column" flex>
+
+                    <ui-view></ui-view>
+
+                </div>
+            </div>
+
+        </md-content>
+    </div>
+
+</md-content>

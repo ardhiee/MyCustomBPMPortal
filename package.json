@@ -1,0 +1,18 @@
+{
+    "name": "hadistra",
+    "version": "1.0.0",
+    "description": "BPM Portal",
+    "author": "Ardi Ismail",
+    "private": true,
+    "scripts": {
+        "start": "node backend/bpm-server.js"
+    },
+    "dependencies": {
+        "express": "latest",
+        "body-parser": "latest",
+        "nodemon": "latest"
+    },
+    "scripts": {
+        "postinstall": "bower install"
+    }
+}

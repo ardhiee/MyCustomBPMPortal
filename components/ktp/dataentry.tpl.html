@@ -1,0 +1,64 @@
+<div class="header">
+    <div class="container-inner">
+        <h1>Data Entry</h1>
+    </div>
+</div>
+<div class="forms">
+    <div class="container-inner">
+
+        <form name="identitas" ng-submit="vm.submitDataEntry($event);">
+
+            <div layout-gt-xs="row">
+
+                <md-input-container class="md-block" flex-gt-xs>
+                    <label>NIK</label>
+                    <input ng-model="vm.Identitas.nik">
+                </md-input-container>
+
+                <md-input-container class="md-block" flex-gt-sm>
+                    <label>Nama</label>
+                    <input ng-model="vm.Identitas.nama">
+                </md-input-container>
+
+            </div>
+
+            <md-input-container class="md-block">
+                <label>Alamat</label>
+                <input ng-model="vm.Identitas.alamat">
+            </md-input-container>
+
+            <div layout-gt-sm="row">
+                <md-input-container>
+                    <label>Tanggal Lahir</label>
+                    <md-datepicker ng-model="vm.Identitas.tanggalLahir"></md-datepicker>
+                </md-input-container>
+
+                <md-input-container class="md-block" flex-gt-sm>
+                    <label>Agama</label>
+                    <md-select ng-model="vm.Identitas.agama">
+                        <md-option ng-repeat="agama in vm.agama" value="{{agama}}">
+                            {{agama}}
+                        </md-option>
+                    </md-select>
+                </md-input-container>
+
+                <md-input-container class="md-block" flex-gt-sm>
+                    <label>Status</label>
+                    <md-select ng-model="vm.Identitas.status">
+                        <md-option ng-repeat="status in vm.status" value="{{status}}">
+                            {{status}}
+                        </md-option>
+                    </md-select>
+                </md-input-container>
+            </div>
+
+            <div layout-gt-sm="row">
+                <md-button class="md-raised md-primary" type="submit">Submit</md-button>
+            </div>
+
+        </form>
+
+
+    </div>
+
+</div>

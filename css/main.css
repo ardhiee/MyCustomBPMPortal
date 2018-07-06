@@ -1,0 +1,147 @@
+.red {
+    background: red;
+}
+
+.yellow {
+    background: yellow;
+}
+
+md-content.login-form {
+    background-image: url("../img/login/bg.jpg");
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-attachment: fixed;
+    height: 100%;
+}
+
+.login-form .hi {
+    font-size: 25px;
+}
+
+.login-form .low {
+    font-size: 11px;
+}
+
+.login-form>md-card {
+    margin-top: 8%;
+    height: 70%;
+}
+
+.login-card md-card-header img {
+    width: inherit;
+    height: 30px;
+}
+
+.logos p {
+    margin-right: 10px;
+}
+
+md-toolbar.section-toolbar {
+    border-radius: 3px 3px 0 0;
+    box-shadow: 0 1px rgba(255, 255, 255, 0.1);
+}
+
+.section-container {
+    border-radius: 4px;
+    margin-bottom: 16px;
+    -webkit-transition: 0.02s padding cubic-bezier(0.35, 0, 0.25, 1);
+    transition: 0.02s padding cubic-bezier(0.35, 0, 0.25, 1);
+    position: relative;
+    padding-bottom: 0;
+}
+
+div.errorMsg>p.ng-binding !important {
+    color: rgb(221, 44, 0);
+    font-size: 12px;
+}
+
+
+/* table */
+
+.md-api-table td,
+.md-api-table th {
+    padding: 12px 16px;
+    text-align: left;
+}
+
+.md-api-table td {
+    vertical-align: top;
+}
+
+.md-api-table td.description *:first-child {
+    margin-top: 0;
+}
+
+.md-api-table td.description *:last-child {
+    margin-bottom: 0;
+}
+
+.md-api-table tr:nth-child(odd) td {
+    background-color: #E3ECF5;
+}
+
+.md-api-table tr:nth-child(even) td {
+    background-color: #D1DEEC;
+}
+
+.md-api-table th {
+    background-color: rgb(63, 81, 181);
+    color: white;
+}
+
+
+/* Sidenav area */
+
+div.sideNavs>md-sidenav {
+    height: 100%;
+}
+
+md-sidenav.ardi {
+    height: 100%;
+}
+
+md-sidenav md-list {
+    padding: 0px 0px 8px 0px;
+}
+
+.avatar {
+    width: 50px !important;
+    height: 50px;
+    margin-right: 12px !important;
+}
+
+
+/* content */
+
+.container-inner {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 5px;
+}
+
+.container-inner h1 {
+    color: #333;
+    /*    color: rgba(255, 255, 255, 0.87);*/
+}
+
+
+/* Toolbar */
+
+.logo {
+    width: 5%;
+}
+
+
+/* Content */
+
+.header {
+    /*    background: #00bcd4;*/
+    background-color: #e9eaec;
+    padding: 20px 0;
+}
+
+.contentRow {
+    min-height: 1000px;
+}
+
+.forms {}

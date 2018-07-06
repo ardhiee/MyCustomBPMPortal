@@ -1,0 +1,235 @@
+<!--
+<md-content layout="column" flex>
+    <md-toolbar layout="row">
+        <button ng-click="toggleSidenav('left')" hide-gt-sm class="menuBtn">
+        <span class="visually-hidden">Menu</span>
+      </button>
+        <h1 class="md-toolbar-tools" layout-align-gt-sm="center">Hello World</h1>
+    </md-toolbar>
+    <md-content layout="row" flex>
+        <div layout="column">
+            <md-sidenav style="height:100%" layout="column" class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')">
+                <div>Foo</div>
+                <div>Foo</div>
+                <div>Foo</div>
+
+            </md-sidenav>
+        </div>
+        <div layout="column" flex id="content">
+            <md-content layout="column" flex>
+                <div layout="row" style="min-height:1000px;" class="yellow">asdasd</div>
+
+            </md-content>
+        </div>
+    </md-content>
+</md-content>
+-->
+
+<md-toolbar class="md-hue-2">
+    <div class="md-toolbar-tools">
+        <md-button class="md-icon-button" aria-label="Sidenav" ng-click="vm.openSidenav()" hide-gt-sm>
+            <md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
+        </md-button>
+
+        <img src="img/hds-logo.png" class="logo" alt="Logo">
+        <h2 flex md-truncate> Hadistra Portal</h2>
+
+        <md-button class="md-icon-button " aria-label="Notification ">
+            <md-icon md-svg-icon="img/icons/notification.svg "></md-icon>
+        </md-button>
+
+        <md-menu md-position-mode="target-right target ">
+            <md-button aria-label="Open user menu " class="md-icon-button " ng-click="vm.openMenu($mdMenu,$event) ">
+                <md-icon md-svg-icon="img/icons/man.svg "></md-icon>
+            </md-button>
+            <md-menu-content width="4 ">
+                <md-menu-item>
+                    <h3>Welcome, {{ vm.username }}</h3>
+                </md-menu-item>
+                <md-menu-item>
+                    <md-button ng-click="vm.logout() ">
+                        <md-icon md-svg-icon="img/icons/sign-out.svg " md-menu-align-target></md-icon>
+                        Log out
+                    </md-button>
+                </md-menu-item>
+
+            </md-menu-content>
+        </md-menu>
+    </div>
+</md-toolbar>
+<md-content layout="row" flex>
+    <div layout="column">
+        <md-sidenav layout="column" class="md-whiteframe-4dp ardi" md-component-id="left" md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')">
+            <md-list ng-repeat="item in vm.allProcess">
+                <md-list-item class="md-2-line " ng-click="null ">
+                    <md-icon md-svg-icon="img/icons/settings.svg " class="avatar "></md-icon>
+                    <div class="md-list-item-text " layout="column ">
+                        <h4>{{item.display}}</h4>
+                    </div>
+                </md-list-item>
+
+            </md-list>
+        </md-sidenav>
+    </div>
+    <div layout="column" flex>
+        <md-content layout="column" flex>
+            <div layout="row" class="contentRow">
+                <div layout="column" flex>
+                    <div class="header">
+                        <div class="container-inner">
+                            <h1> Data Entry </h1>
+                        </div>
+                    </div>
+                    <div class="forms">
+                        <!--                        TEST {{ ideForm.$valid }} Ini {{ ideForm }}-->
+                        <div class="container-inner">
+                            <md-tabs md-dynamic-height md-border-bottom>
+
+                                <md-tab label="ide">
+                                    <md-content class="md-padding">
+                                        <form name="ideForm">
+                                            <div layout-gt-sm="row ">
+                                                <md-input-container class="md-block " flex-gt-sm>
+                                                    <label>First name</label>
+                                                    <input ng-model="ideForm.firstName " required>
+                                                </md-input-container>
+
+                                            </div>
+
+
+                                        </form>
+                                    </md-content>
+                                </md-tab>
+                                <md-tab label="ver" ng-disabled="!ideForm.$valid">
+                                    <md-content class="md-padding">
+                                        <form name="userForm ">
+                                            <div layout-gt-xs="row ">
+                                                <md-input-container class="md-block " flex-gt-xs>
+                                                    <label>Company (Disabled)</label>
+                                                    <input ng-model="user.company " disabled>
+                                                </md-input-container>
+
+                                                <md-input-container>
+                                                    <label>Enter date</label>
+                                                    <md-datepicker ng-model="user.submissionDate "></md-datepicker>
+                                                </md-input-container>
+                                            </div>
+
+                                            <div layout-gt-sm="row ">
+                                                <md-input-container class="md-block " flex-gt-sm>
+                                                    <label>First name</label>
+                                                    <input ng-model="user.firstName ">
+                                                </md-input-container>
+
+                                                <md-input-container class="md-block " flex-gt-sm>
+                                                    <label>Long Last Name That Will Be Truncated And 3 Dots (Ellipsis) Will Appear At The End</label>
+                                                    <input ng-model="theMax ">
+                                                </md-input-container>
+                                            </div>
+
+                                            <md-input-container class="md-block ">
+                                                <label>Address</label>
+                                                <input ng-model="user.address ">
+                                            </md-input-container>
+
+                                            <md-input-container md-no-float class="md-block ">
+                                                <input ng-model="user.address2 " placeholder="Address 2 ">
+                                            </md-input-container>
+
+                                            <div layout-gt-sm="row ">
+                                                <md-input-container class="md-block " flex-gt-sm>
+                                                    <label>City</label>
+                                                    <input ng-model="user.city ">
+                                                </md-input-container>
+
+                                                <md-input-container class="md-block " flex-gt-sm>
+                                                    <label>State</label>
+                                                    <md-select ng-model="user.state ">
+                                                        <md-option ng-repeat="state in states " value="{{state.abbrev}} ">
+                                                            {{state.abbrev}}
+                                                        </md-option>
+                                                    </md-select>
+                                                </md-input-container>
+
+
+                                            </div>
+
+                                            <md-input-container class="md-block ">
+                                                <label>Biography</label>
+                                                <textarea ng-model="user.biography " md-maxlength="150 " rows="5 " md-select-on-focus></textarea>
+                                            </md-input-container>
+
+                                        </form>
+                                    </md-content>
+                                </md-tab>
+                                <md-tab label="dde">
+                                    <md-content class="md-padding">
+                                        <form name="userForm ">
+                                            <div layout-gt-xs="row ">
+                                                <md-input-container class="md-block " flex-gt-xs>
+                                                    <label>Company (Disabled)</label>
+                                                    <input ng-model="user.company " disabled>
+                                                </md-input-container>
+
+                                                <md-input-container>
+                                                    <label>Enter date</label>
+                                                    <md-datepicker ng-model="user.submissionDate "></md-datepicker>
+                                                </md-input-container>
+                                            </div>
+
+                                            <div layout-gt-sm="row ">
+                                                <md-input-container class="md-block " flex-gt-sm>
+                                                    <label>First name</label>
+                                                    <input ng-model="user.firstName ">
+                                                </md-input-container>
+
+                                                <md-input-container class="md-block " flex-gt-sm>
+                                                    <label>Long Last Name That Will Be Truncated And 3 Dots (Ellipsis) Will Appear At The End</label>
+                                                    <input ng-model="theMax ">
+                                                </md-input-container>
+                                            </div>
+
+                                            <md-input-container class="md-block ">
+                                                <label>Address</label>
+                                                <input ng-model="user.address ">
+                                            </md-input-container>
+
+                                            <md-input-container md-no-float class="md-block ">
+                                                <input ng-model="user.address2 " placeholder="Address 2 ">
+                                            </md-input-container>
+
+                                            <div layout-gt-sm="row ">
+                                                <md-input-container class="md-block " flex-gt-sm>
+                                                    <label>City</label>
+                                                    <input ng-model="user.city ">
+                                                </md-input-container>
+
+                                                <md-input-container class="md-block " flex-gt-sm>
+                                                    <label>State</label>
+                                                    <md-select ng-model="user.state ">
+                                                        <md-option ng-repeat="state in states " value="{{state.abbrev}} ">
+                                                            {{state.abbrev}}
+                                                        </md-option>
+                                                    </md-select>
+                                                </md-input-container>
+
+
+                                            </div>
+
+                                            <md-input-container class="md-block ">
+                                                <label>Biography</label>
+                                                <textarea ng-model="user.biography " md-maxlength="150 " rows="5 " md-select-on-focus></textarea>
+                                            </md-input-container>
+
+                                        </form>
+                                    </md-content>
+                                </md-tab>
+                            </md-tabs>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </md-content>
+    </div>
+</md-content>

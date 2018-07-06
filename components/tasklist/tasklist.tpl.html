@@ -1,0 +1,26 @@
+<div class="header">
+    <div class="container-inner">
+        <h1>Task List</h1>
+    </div>
+</div>
+<div class="forms">
+
+    <md-list>
+
+        <md-list-item ng-click="vm.showConfirm($event,item.taskId, item.taskSubject)" ng-repeat="item in vm.allTasks" class="noright md-3-line">
+            <md-divider></md-divider>
+            <img alt="icons" ng-src="img/icons/task.png" class="md-avatar" />
+            <div class="md-list-item-text" layout="column">
+                <h3> {{ item.taskSubject }} </h3>
+                <h4> {{ item.instanceName }} </h4>
+                <h4> {{ item.taskSubject }} </h4>
+                <p> Due : {{ item.taskDueDate | date:'medium' }} </p>
+            </div>
+
+            <md-button class="md-primary md-raised" ng-click="vm.showConfirm($event,item.taskId,item.taskSubject)">Claim</md-button>
+            <md-divider></md-divider>
+        </md-list-item>
+
+    </md-list>
+
+</div>

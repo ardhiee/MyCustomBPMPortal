@@ -1,0 +1,16 @@
+{
+    "agama": ["Islam", "Protestan", "Katolik", "Hindu", "Budha"],
+    "status": ["Menikah", "Single"],
+    "prosesKTP": [
+        {
+            "taskName": "Step: Input Data",
+            "state": "main.dataentry"
+        },
+        {
+            "taskName": "Step: Finalize",
+            "state": "main.finalize"
+        }
+
+        ]
+
+}

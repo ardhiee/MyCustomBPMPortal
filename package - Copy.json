@@ -1,0 +1,31 @@
+{
+    "name": "hadistra",
+    "version": "1.0.0",
+    "description": "keren dah",
+    "private": true,
+    "scripts": {
+        "start": "node backend/bpm-server.js"
+    },
+    "dependencies": {
+        "express": "latest",
+        "body-parser": "latest",
+        "nodemon": "latest"
+    },
+    "bower": {
+        "directory": "libs",
+        "name": "hadistra portal",
+        "version": "1.0.0",
+        "dependencies": {
+            "angular": "latest",
+            "angular-animate": "latest",
+            "angular-material": "latest",
+            "angular-aria": "latest",
+            "angular-cookies": "latest",
+            "mdi": "latest",
+            "lodash": "latest",
+            "angular-ui-router": "latest",
+            "angular-material-icons": "latest",
+            "material-angular-paging": "latest"
+        }
+    }
+}

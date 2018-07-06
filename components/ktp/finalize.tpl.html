@@ -1,0 +1,71 @@
+<div class="header">
+    <div class="container-inner">
+        <h1>Finalize</h1>
+    </div>
+</div>
+<div class="forms">
+    <div class="container-inner">
+
+        <md-list>
+            <div layout="row">
+                <md-list-item class="md-2-line">
+                    <md-icon md-svg-icon="{{phone.options.icon}}" ng-if="phone.options.icon" ng-class="{'md-avatar-icon': phone.options.avatarIcon}"></md-icon>
+                    <div class="md-list-item-text">
+                        <h3> Nama </h3>
+                        <p> {{ vm.Identitas.nama }} </p>
+                    </div>
+                </md-list-item>
+                <md-list-item class="md-2-line">
+                    <md-icon md-svg-icon="{{phone.options.icon}}" ng-if="phone.options.icon" ng-class="{'md-avatar-icon': phone.options.avatarIcon}"></md-icon>
+                    <div class="md-list-item-text">
+                        <h3> NIK </h3>
+                        <p> {{ vm.Identitas.nik }} </p>
+                    </div>
+                </md-list-item>
+            </div>
+
+            <md-list-item class="md-2-line">
+                <md-icon md-svg-icon="{{phone.options.icon}}" ng-if="phone.options.icon" ng-class="{'md-avatar-icon': phone.options.avatarIcon}"></md-icon>
+                <div class="md-list-item-text">
+                    <h3> Alamat </h3>
+                    <p> {{ vm.Identitas.alamat }} </p>
+                </div>
+            </md-list-item>
+            <div layout="row">
+                <md-list-item class="md-2-line">
+                    <md-icon md-svg-icon="{{phone.options.icon}}" ng-if="phone.options.icon" ng-class="{'md-avatar-icon': phone.options.avatarIcon}"></md-icon>
+                    <div class="md-list-item-text">
+                        <h3> Tanggal Lahir </h3>
+                        <p> {{ vm.Identitas.tanggalLahir | date }} </p>
+                    </div>
+                </md-list-item>
+                <md-list-item class="md-2-line">
+                    <md-icon md-svg-icon="{{phone.options.icon}}" ng-if="phone.options.icon" ng-class="{'md-avatar-icon': phone.options.avatarIcon}"></md-icon>
+                    <div class="md-list-item-text">
+                        <h3> Agama </h3>
+                        <p> {{ vm.Identitas.agama }} </p>
+                    </div>
+                </md-list-item>
+                <md-list-item class="md-2-line">
+                    <md-icon md-svg-icon="{{phone.options.icon}}" ng-if="phone.options.icon" ng-class="{'md-avatar-icon': phone.options.avatarIcon}"></md-icon>
+                    <div class="md-list-item-text">
+                        <h3> Status </h3>
+                        <p> {{ vm.Identitas.status }} </p>
+                    </div>
+                </md-list-item>
+            </div>
+
+        </md-list>
+
+
+
+        <div layout-gt-sm="row">
+            <md-button class="md-raised md-primary" ng-click="vm.approve($event,vm.Identitas)">Approve</md-button>
+            <md-button class="md-raised md-warn" ng-click="vm.approve($event,vm.Identitas)">Reject</md-button>
+        </div>
+
+
+
+    </div>
+
+</div>
